@@ -1,6 +1,6 @@
 # GameSphere3.0
 
-**Name** - GameSphere3.0 
+**Name** - GameSphere 3.0 
   
 **Technologies Used** - HTML, CSS, JavaScript, Bootstrap, WebSocket, jQuery, PHP, MySQL, Laravel etc..
 
