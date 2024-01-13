@@ -1,8 +1,8 @@
 ---
-name: Issue template
+name: Feature template
 about: 'Describe this issue template''s purpose here. '
 title: 'Feature:'
-labels: SWOC'24
+labels: Feature, SWOC'24
 assignees: ''
 
 ---
@@ -22,21 +22,21 @@ Explain the use case and how this feature will benefit the project or its users.
 **Proposed Solution:**
 If you have any ideas for how the feature could be implemented, describe them here.
 
+---
+
 ### Implementation Details
 
 **Technical Details:**
 Provide any technical insights or considerations that might be relevant to implementing the feature.
 
-**Alternatives Considered:**
-Have you considered any alternative approaches to achieve the same goal? If so, describe them here.
+
+---
 
 ### Additional Context
 
 **Screenshots or Mockups:**
 If applicable, attach screenshots or mockups illustrating the proposed feature.
 
-**Related Feature Requests:**
-Are there any related feature requests or GitHub issues? Reference them here.
 
 ### Contributor Checklist
 
