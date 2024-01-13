@@ -11,11 +11,11 @@ assignees: ''
 
 ## Description
 
-## Technologies used
+## Technologies Used
 
 ## Screenshot
 
-## Connect Us On social media -
+## Connect Us On Social Media -
 - [ ]  Star the repositry
 - [ ]  <a href="https://github.com/GameSphere-MultiPlayer" target="_blank">GitHub</a>
 - [ ]   <a href="https://www.linkedin.com/company/gamesphere-multiplayer/" target="_blank">LinkedIn</a>
