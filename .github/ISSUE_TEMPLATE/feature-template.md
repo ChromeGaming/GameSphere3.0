@@ -37,6 +37,7 @@ Provide any technical insights or considerations that might be relevant to imple
 **Screenshots or Mockups:**
 If applicable, attach screenshots or mockups illustrating the proposed feature.
 
+---
 
 ### Contributor Checklist
 
@@ -46,9 +47,13 @@ Please make sure that you have considered the following before submitting this f
 - [ ] I have reviewed the project's CONTRIBUTING guidelines.
 - [ ] I understand that submitting a feature request does not guarantee implementation.
 
+---
+
 ### Additional Notes
 
 Add any other notes or comments related to this feature request.
+
+---
 
 ### Stay Connected with Us:
 GitHub: https://github.com/GameSphere-MultiPlayer
