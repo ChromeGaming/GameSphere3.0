@@ -1187,7 +1187,11 @@ body.active { overflow: hidden; }
 
   }
 
-
+  ::placeholder {
+    text-align: center;
+    color: black; 
+ }
+ 
 
   /**
    * REUSED STYLE
@@ -1204,10 +1208,10 @@ body.active { overflow: hidden; }
   .header .container { gap: 30px; }
 
   .header-actions {
-    display: flex;
-    margin-left: auto;
+    display: inline-flex;
+    margin-left: 0ric;
     align-items: center;
-    gap: 35px;
+    gap: 25px;
   }
 
   .header-actions .btn-primary { display: none; }
@@ -1217,7 +1221,7 @@ body.active { overflow: hidden; }
     color: var(--white);
   }
 
-  .search-btn ion-icon { --ionicon-stroke-width: 80px; }
+  .search-btn ion-icon { --ionicon-stroke-width: 20px; }
 
   .search-btn::after {
     content: "";
