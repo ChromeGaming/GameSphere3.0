@@ -863,7 +863,7 @@ body.active { overflow: hidden; }
 
 .divider {
   height: 4px;
-  color:aliceblue
+  color:aliceblue;
   margin-block: 40px;
   border-top: 1px solid var(--rich-black-fogra-29);
   border-bottom: 1px solid hsla(0, 0%, 100%, 0.1);
@@ -1608,6 +1608,5 @@ body.active { overflow: hidden; }
     font-size: 30px;
     transform: rotate(-0.25turn);
   }
-
-
 }
+
