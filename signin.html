@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in</title>
+    <link rel="stylesheet" href="./assets/css/signin_style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="tabs">
+            <button class="tab-button active" onclick="showSignUp()">Sign Up</button>
+            <button class="tab-button" onclick="showLogin()">Log In</button>
+        </div>
+
+        <div id="sign-up-form">
+            
+            <form name="myform" method='POST' action="#" onsubmit="submitted(); return false;" >
+                    Username<input type="text" placeholder="Enter Username" name="username" required> <br> <br>
+                    Email<input type="email" placeholder="Enter Email" name="email" required><br><br> 
+                    Password<input type="password" placeholder="Enter Password" name="password" required> <br> <br>
+                    <input type="submit" name='submit' value="Submit" class="submit-signin">
+            </form>
+        </div>
+
+        <div id="login-form">
+           
+            <form action="#" method="POST" onsubmit="submitted2(); return false;" >
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" placeholder="Enter Username" required autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Enter Password" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Log In</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function showSignUp() {
+            document.getElementById("sign-up-form").style.display = "block";
+            document.getElementById("login-form").style.display = "none";
+            document.querySelector(".tab-button.active").classList.remove("active");
+            document.querySelectorAll(".tab-button")[0].classList.add("active");
+        }
+
+        function showLogin() {
+            document.getElementById("login-form").style.display = "block";
+            document.getElementById("sign-up-form").style.display = "none";
+            document.querySelector(".tab-button.active").classList.remove("active");
+            document.querySelectorAll(".tab-button")[1].classList.add("active");
+        }
+        function submitted(){
+            alert('Thank you for Signing in');
+            window.location.href = 'index.html';
+        }
+        function submitted2(){
+            alert('Successfully Logged in');
+            window.location.href = 'index.html';
+        }
+    </script>
+    
+</body>
+</html>
