@@ -60,7 +60,7 @@ pre {
     font-size: 20px;
     padding: 0px 0px;
     font-family:var(--ff-poppins);
-    margin:45px 5px 5px 15px;
+    margin:45px 5px 5px 15px; 
 }
 .one{
     margin-bottom: 20px;
@@ -73,4 +73,26 @@ pre {
     text-align: center;
     font-size: 65px; 
 }
+
+/* connect us section*/
+.contactus{
+    text-align: center;
+    padding:15px 15px;
+    margin:10px 0 0 0;
+    background-color: var(--raisin-black);
+}
+
+.contact{
+    font-size: 25px;
+    margin: 0%;
+}
+
+.fa-brands{
+    color: white;
+    margin:0 25px 0px 25px;
+    font-size:50px;
+}
+
+
+
 
