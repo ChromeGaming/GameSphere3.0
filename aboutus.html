@@ -18,27 +18,37 @@
 </head>
 <body class="">  
   <div id="main-div">
-  <div class="mainhead"><p class="head">Welcome to GameSphere</p> </div>
+  <div class="mainhead"><p class="head">About Us</p> </div>
     
-  <div class="one">
-    <p class="intro-text"> 
-      <pre>
-      This platform is for every user where you are 
-      free to play any game without paying any fee
-      with your friend.This platform also provides 
-      you a chance to create your own game and 
-      get firm or reward.</pre>
-    </p>
-  </div>
+  <div class="intro">
+    <div class="child-left">
+      <p class="intro-text"> 
+        <pre>
+        This platform is for every user where you are 
+        free to play any game without paying any fee
+        with your friend.This platform also provides 
+        you a chance to create your own game and 
+        get firm or reward.</pre>
+      </p>
+      
+    </div>
 
-      <div class="contributors">
-        <p>Contributors</p>
+    <div class="child-right" >
+      <p class="welcome-head">Welcome to</p>
+      <p class="second-head">GameSphere</p>
+    </div>
+    
+  </div> 
+
+      <div id="contributors">
+        
         
       </div>
+
       <div class="contactus">
         <p class="contact">
           Don't Forget to connect with us 
-        </p>
+        </p> 
         <p> 
           <a href="https://www.linkedin.com/company/gamesphere-multiplayer/?viewAsMember=true"> 
             <i class="fa-brands fa-linkedin-in"></i>
@@ -50,7 +60,37 @@
           </p>
       </div>
     </div>
+    <script>
+//contributors list 
+async function fetchGitHubContributors(username, repo) {
+  const apiUrl = `https://api.github.com/repos/${username}/${repo}/contributors`;
+
+  try {
+      const response = await fetch(apiUrl); 
+      const data = await response.json();
+
+      displayContributors(data);
+  } catch (error) {
+      console.error('Error fetching GitHub contributors:', error);
+  }
+}
+
+function displayContributors(contributors) {
+  const contributorsList=document.getElementById('contributors');
+
+  contributors.forEach(contributor => {
+      const contributorDiv = document.createElement('div');
+      contributorDiv.innerHTML = ` 
+          <img src="${contributor.avatar_url}" alt="${contributor.login}" width="50" height="50">
+          <p>${contributor.login}</p> 
+      `;
+      contributorsList.appendChild(contributorDiv);
+  });
+} 
+fetchGitHubContributors('GameSphere-MultiPlayer', 'GameSphere3.0');
+
+    </script>
       <script src="https://kit.fontawesome.com/5bda9429cc.js" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
+    <!-- <script src="js/aboutscript.js"></script>  -->
 </body>
 </html>

@@ -55,6 +55,21 @@ body{
     font-size: 75px;
 }
 
+.welcome-head{
+    text-align: center;
+    margin-left:0%;
+    font-size:70px ;
+    margin-bottom: 0%;
+    margin-top:20px;
+}
+
+.second-head{
+    font-size: 85px;
+    margin: 0% auto auto auto;
+    padding:5px 5px;
+   
+}
+
 pre {
     text-align: left;
     font-size: 20px;
@@ -62,10 +77,16 @@ pre {
     font-family:var(--ff-poppins);
     margin:45px 5px 5px 15px; 
 }
-.one{
+.intro{
     margin-bottom: 20px;
+    display: flex;
 }
-
+.child-left{
+    margin-right: 20%;
+}
+.child-left, .child-right{
+    display: inline;
+}
 /* contributors */
 .contributors p{
     margin: 15px 15px; 
@@ -92,6 +113,10 @@ pre {
     color: white;
     margin:0 25px 0px 25px;
     font-size:50px;
+}
+
+.fa-brands:hover{
+    font-size:55px;
 }
 
 
