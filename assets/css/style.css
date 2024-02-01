@@ -55,8 +55,8 @@
   --section-padding: 100px;
 
 }
-
-@import url(https://fonts.googleapis.com/css?family=Poiret+One);
+//import url quotes added
+@import url('https://fonts.googleapis.com/css?family=Poiret+One');
 /********************  Loading Page ************************/
 .loadFont {
     font-family: 'Poiret One', cursive;
@@ -518,7 +518,7 @@ body.active { overflow: hidden; }
   background-position: center;
   min-height: 750px;
   height: 100vh;
-  max-height: 1000px;
+  max-height: 1000px; 
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -949,9 +949,6 @@ body.active { overflow: hidden; }
 }
 
 
-
-
-
 /*-----------------------------------*\
  * #MOVIE DETAIL 
 \*-----------------------------------*/
@@ -1227,7 +1224,7 @@ body.active { overflow: hidden; }
     content: "";
     position: absolute;
     top: 1px;
-    right: -20px;
+    right:-20px;
     background: hsla(0, 0%, 100%, 0.1);
     width: 2px;
     height: 14px;
@@ -1285,14 +1282,16 @@ body.active { overflow: hidden; }
     margin-inline: auto;
   }
 
-  .cta .email-field { margin-bottom: 0; }
+  .cta .email-field { 
+    margin-bottom: 0; 
+  }
 
   .cta-form-btn {
     position:relative;
     top: 1px;
     right: 1px;
     bottom: 1px;
-    max-height: 1 px;
+    max-height: 1px;
   }
 
 
@@ -1608,12 +1607,6 @@ body.active { overflow: hidden; }
     font-size: 30px;
     transform: rotate(-0.25turn);
   }
-
-
 }
 
-/**
-   * SIGN IN PAGE
-   */
 
-   
