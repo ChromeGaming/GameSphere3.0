@@ -4,26 +4,97 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!-- 
-    - favicon
-  -->
+    <!--- favicon-->
   <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
 
-  <!-- 
-  - custom css link
--->
-  <link rel="stylesheet" href="./assets/css/style.css">
-
-  <!-- 
-  - google font link
--->
+  <!---custom css link-->
+  <link rel="stylesheet" href="./assets/css/aboutusstyle.css">
+  <!--- google font link-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
     rel="stylesheet">
 </head>
-<body class="">
-    <h1>GameSphere</h1>
+<body class="">  
+  <div id="main-div">
+  <div class="mainhead"><p class="head">About Us</p> </div>
+    
+  <div class="intro">
+   
+
+    <div class="child-left">
+      <p class="welcome-head">Welcome to</p>
+      <p class="second-head">GameSphere</p>
+    </div>
+    
+    <div class="child-right">
+      <p class="intro-text"> 
+        <pre>
+        This platform is for every user where you are 
+        free to play any game without paying any fee
+        with your friend.This platform also provides 
+        you a chance to create your own game and 
+        get firm or reward.</pre>
+      </p>
+      
+    </div>
+  </div> 
+
+  <div class="contributors">
+  <p class="head">Contributors</p>
+      <div id="contributors">
+        
+          
+      </div>
+    </div>
+      <div class="contactus">
+        <p class="contact">
+          Don't Forget to connect with us 
+        </p> 
+        <p> 
+          <a href="https://www.linkedin.com/company/gamesphere-multiplayer/?viewAsMember=true"> 
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+         
+          <a href="https://github.com/GameSphere-MultiPlayer"> 
+            <i class="fa-brands fa-github"></i> 
+          </a>
+          </p>
+      </div>
+    </div>
+    <script>
+//contributors list 
+async function fetchGitHubContributors(username, repo) {
+  const apiUrl = `https://api.github.com/repos/${username}/${repo}/contributors`;
+
+  try {
+      const response = await fetch(apiUrl); 
+      const data = await response.json();
+      displayContributors(data);
+  } 
+  catch (error) {
+      console.error('Error!', error);
+  }
+}
+
+function displayContributors(contributors) {
+  const contributorsList=document.getElementById('contributors');
+  
+  contributors.forEach(contributor => {  
+    const contributorDiv = document.createElement('div');
+    contributorDiv.setAttribute("class","profile");
+      contributorDiv.innerHTML = ` 
+        <img src="${contributor.avatar_url}" alt="${contributor.login}" width="70" height="70">
+        <p>${contributor.login}</p>       
+          
+      `; 
+      contributorsList.appendChild(contributorDiv);
+  }); 
+}  
+fetchGitHubContributors('GameSphere-MultiPlayer', 'GameSphere3.0');
+
+    </script>
+      <script src="https://kit.fontawesome.com/5bda9429cc.js" crossorigin="anonymous"></script>
 </body>
 </html>
