@@ -303,7 +303,10 @@ body.active { overflow: hidden; }
 
 .G-Card .card-banner:hover { box-shadow: 0 1px 2px hsla(0, 0%, 0%, 0.5); }
 
-.G-Card .card-banner:hover::after { background: hsl(203, 80%, 56%); }
+.G-Card .card-banner:hover::after { background: #0cd1e84a;
+                                  border-bottom:5px solid hsl(187, 87%, 51%);
+                                  border-top:5px solid #0cd1e8}
+
 
 .G-Card .card-banner img {
   width: 100%;
