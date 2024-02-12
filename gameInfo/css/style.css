@@ -866,9 +866,12 @@ body.active {
 /*-----------------------------------*\
  * #FAQ
 \*-----------------------------------*/
-#faq1 {
-  color: var(--light-gray);
+.faq {
   border: 1px solid red;
+  color: var(--white);
+}
+.faq-question {
+  color: white;
 }
 
 /*-----------------------------------*\
@@ -910,10 +913,17 @@ body.active {
 :is(.footer-link, .quicklink-link, .social-link):is(:hover, :focus) {
   color: var(--citrine);
 }
+.faq {
+  border: 1px solid red;
+  color: var(--white);
+}
+.faq-question {
+  color: white;
+}
 
 .divider {
   height: 4px;
-  color: aliceblue;
+  color: rgb(202, 199, 4);
   margin-block: 40px;
   border-top: 1px solid var(--rich-black-fogra-29);
   border-bottom: 1px solid hsla(0, 0%, 100%, 0.1);
