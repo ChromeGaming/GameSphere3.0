@@ -5,6 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign in</title>
     <link rel="stylesheet" href="./assets/css/signin_style.css">
+    <style>
+        .password-container {
+            position: relative;
+        }
+
+        .password-container .eye-icon {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
 
@@ -17,10 +30,14 @@
         <div id="sign-up-form">
             
             <form name="myform" method='POST' action="#" onsubmit="submitted(); return false;" >
-                    Username<input type="text" placeholder="Enter Username" name="username" required> <br> <br>
-                    Email<input type="email" placeholder="Enter Email" name="email" required><br><br> 
-                    Password<input type="password" placeholder="Enter Password" name="password" required> <br> <br>
-                    <input type="submit" name='submit' value="Submit" class="submit-signin">
+                Username<input type="text" id="name" placeholder="Enter Username" name="username" required oninput="validateName('name')" > <br> <br>
+                Email<input type="email" placeholder="Enter Email" name="email" required><br><br> 
+                Password<div class="password-container">
+                    <input type="password" id="password" placeholder="Enter Password" name="password" required>
+                    <span class="eye-icon" onclick="togglePasswordVisibility('password', 'eye-icon')"></span>
+                </div><br><br>
+                Confirm Password<input type="password" placeholder="Confirm Password" name="confirm_password" required><br><br>
+                <input type="submit" name='submit' value="Submit" class="submit-signin">
             </form>
         </div>
 
@@ -29,11 +46,14 @@
             <form action="#" method="POST" onsubmit="submitted2(); return false;" >
                 <div class="form-group">
                     <label for="username">Username:</label>
-                    <input type="text" id="username" name="username" placeholder="Enter Username" required autocomplete="off">
+                    <input type="text" id="username" name="username" placeholder="Enter Username" oninput="validateName('username')" required autocomplete="off">
                 </div>
                 <div class="form-group">
                     <label for="password">Password:</label>
-                    <input type="password" id="password" name="password" placeholder="Enter Password" required>
+                    <div class="password-container">
+                        <input type="password" id="password" name="password" placeholder="Enter Password" required>
+                        <span class="eye-icon" onclick="togglePasswordVisibility('password', 'eye-icon')"></span>
+                    </div>
                 </div>
                 <div class="form-group">
                     <button type="submit">Log In</button>
@@ -41,7 +61,31 @@
             </form>
         </div>
     </div>
+    <!-- ADDING FORM VALIDATION IN NAME FIELD  -->
+    <script>
+        function validateName(inputId) {
+            let input = document.getElementById(inputId);
+            let value = input.value;
+            let regex = /^[A-Za-z ]+$/;
 
+            if (!regex.test(value)) {
+                alert("Please enter only characters in the name field.");
+                input.value = value.replace(/[^A-Za-z ]/g, ''); // Remove any non-alphabetic characters
+            }
+        }
+// ADDING EYE ICON IN PASSWORD
+        function togglePasswordVisibility(passwordId, eyeIconId) {
+            let passwordInput = document.getElementById(passwordId);
+            let eyeIcon = document.getElementById(eyeIconId);
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                
+            } else {
+                passwordInput.type = "password";
+                
+            }
+        }
+    </script>
     <script>
         function showSignUp() {
             document.getElementById("sign-up-form").style.display = "block";
