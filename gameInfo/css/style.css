@@ -866,13 +866,6 @@ body.active {
 /*-----------------------------------*\
  * #FAQ
 \*-----------------------------------*/
-.faq {
-  border: 1px solid red;
-  color: var(--white);
-}
-.faq-question {
-  color: white;
-}
 
 /*-----------------------------------*\
  * #FOOTER
@@ -912,13 +905,6 @@ body.active {
 
 :is(.footer-link, .quicklink-link, .social-link):is(:hover, :focus) {
   color: var(--citrine);
-}
-.faq {
-  border: 1px solid red;
-  color: var(--white);
-}
-.faq-question {
-  color: white;
 }
 
 .divider {

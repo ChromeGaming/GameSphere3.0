@@ -1013,10 +1013,15 @@
         -->
 
           <br /><br />
-          <section class="faq" style="color: red">
+          <section class="faq" style="color: white">
+            <h2 style="display: flex; justify-content: center">
+              Frequently Asked Questions
+            </h2>
             <div>
-              <h4 class="faq-question">What is GameSphere?</h4>
-              <p class="faq-answer" class="hidden" style="display: none">
+              <h4 class="faq-question" style="margin-top: 5%">
+                What is GameSphere?
+              </h4>
+              <p class="faq-answer" style="display: none; margin-top: 3%">
                 GameSphere is an India-based online gaming platform dedicated to
                 providing the ultimate online playground for gamers. With a team
                 of 40 passionate individuals, we strive to create an inclusive
@@ -1026,8 +1031,10 @@
               </p>
             </div>
             <div>
-              <h4 class="faq-question">How can I access GameSphere?</h4>
-              <p class="faq-answer" class="hidden" style="display: none">
+              <h4 class="faq-question" style="margin-top: 5%">
+                How can I access GameSphere?
+              </h4>
+              <p class="faq-answer" style="display: none; margin-top: 3%">
                 GameSphere is accessible to anyone with an internet connection.
                 Simply visit our website to create an account and start gaming!
                 Whether you're a casual player or a serious gamer, GameSphere
@@ -1035,10 +1042,10 @@
               </p>
             </div>
             <div>
-              <h4 class="faq-question">
+              <h4 class="faq-question" style="margin-top: 5%">
                 What types of games are available on GameSphere?
               </h4>
-              <p class="faq-answer" style="display: none">
+              <p class="faq-answer" style="display: none; margin-top: 3%">
                 GameSphere hosts a wide range of games, including multiplayer,
                 single-player, strategy, puzzle, and more. We collaborate with
                 game developers worldwide to bring you the latest and most
@@ -1048,10 +1055,10 @@
               </p>
             </div>
             <div>
-              <h4 class="faq-question">
+              <h4 class="faq-question" style="margin-top: 5%">
                 How can game developers benefit from GameSphere for Developers?
               </h4>
-              <p class="faq-answer" style="display: none">
+              <p class="faq-answer" style="display: none; margin-top: 3%">
                 GameSphere for Developers provides game developers with a
                 platform to showcase their games and reach a wider audience. By
                 partnering with GameSphere, developers gain access to valuable
@@ -1062,10 +1069,10 @@
               </p>
             </div>
             <div>
-              <h4 class="faq-question">
+              <h4 class="faq-question" style="margin-top: 5%">
                 How can I get in touch with GameSphere for further inquiries?
               </h4>
-              <p class="faq-answer" style="display: none">
+              <p class="faq-answer" style="display: none; margin-top: 3%">
                 If you have any questions, feedback, or inquiries about
                 GameSphere, we encourage you to reach out to us via our contact
                 page or through our official social media channels. Our team is
@@ -1079,10 +1086,6 @@
 
           <div class="quicklink-wrapper">
             <ul class="quicklink-list">
-              <li>
-                <a href="#" class="quicklink-link">FAQ</a>
-              </li>
-
               <li>
                 <a href="#" class="quicklink-link">Help Center</a>
               </li>
@@ -1176,16 +1179,19 @@
     ></script>
     <script>
       //faq feature
-      const faqQuestion = document.querySelectorAll(".faq-question");
-      const faqAnswer = document.querySelectorAll(".faq-answer");
+      const faqQuestions = document.querySelectorAll(".faq-question");
+      const faqAnswers = document.querySelectorAll(".faq-answer");
 
       faqQuestions.forEach((faqQuestion, index) => {
         faqQuestion.addEventListener("click", function () {
-          // Change the color of the clicked question
-          faqQuestion.style.color = "white";
-
-          // Show the corresponding answer by setting its display to "block"
-          faqAnswers[index].style.display = "block";
+          const answerDisplay = faqAnswers[index].style.display;
+          const isAnswerVisible = answerDisplay === "block";
+          faqAnswers.forEach((answer) => {
+            answer.style.display = "none";
+          });
+          if (!isAnswerVisible) {
+            faqAnswers[index].style.display = "block";
+          }
         });
       });
     </script>
