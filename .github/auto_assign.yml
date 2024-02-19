@@ -1,0 +1,8 @@
+addReviewers: true
+
+addAssignees: false
+
+reviewers:
+  - Durgesh4993
+
+numberOfReviewers: 1
