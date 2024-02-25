@@ -1,26 +1,30 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: auto;
-    background:hsl(207, 19%, 11%);
-    padding: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-  }
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif; /* Modern, readable font */
+  background: #121212 url('/assets/images/gb.jpg') no-repeat center center fixed; /* Dark theme with gaming background */
+  background-size: cover;
+  color: #ffffff; /* High contrast text color for readability */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+ }
   
-  .container {
-    background-color: rgba(255, 255, 255, 0.5);
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    width: 400px;
-    overflow: hidden;
-    position: relative;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for smoother animation */
+ .container {
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center; 
+  background-color: rgba(255, 255, 255, 0.05); /* Reduced opacity for a more transparent look */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 255, 255, 0.5);
+  width: 350px;
+  max-width: 90%;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
   }
-
   
   .container::before {
     content: "";
@@ -42,42 +46,34 @@ body {
   
   .tabs {
     display: flex;
-    justify-content: center;
+    justify-content: space-around; /* Evenly space the tabs */
     margin-bottom: 20px;
+    width: 100%;
   }
   
   .tab-button {
-    background: none;
-    border: none;
-    margin-right:10px;
-    padding: 15px 30px;
+    background-color: transparent;
+    border: 2px solid #00ffea; /* Neon border for tabs */
+    color: #00ffea; /* Neon text color */
+    padding: 10px 20px;
     cursor: pointer;
-    font-weight: bold;
-    color: rgba(9, 9, 153, 0.567);
-    font-size: 18px;
-    transition: transform 0.5s ease-in-out, background-color 0.5s ease-in-out;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
   }
-  
-  .tab-button.active {
-    color: black;
-    background-color: hsl(187, 87%, 51%);
-  }
-  
-  .tab-button:hover {
-    background-color: rgba(255, 255, 255, 0.53);
-    transform: scale(1.2);
+
+  .tab-button.active, .tab-button:hover {
+    background-color: #00ffea; /* Highlight for active tab or on hover */
+    color: #121212; /* Dark text for contrast */
   }
   
   .form-group {
-    margin-bottom: 40px;
+    margin-bottom: 15px; /* Consistent spacing between form groups */
   }
   
   label {
-    display: block;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    display: block; /* Ensure labels are block-level for consistent alignment */
+    margin-bottom: 5px; /* Space between label and input */
     font-weight: bold;
-    color: rgba(0, 0, 0, 0.5);
   }
   
   input {
@@ -116,8 +112,6 @@ body {
     transition: background-color 0.3s ease;
   }
   
-
-  
   #login-form {
     background-color: #fff;
     padding: 50px;
@@ -142,11 +136,43 @@ body {
   button {
     display: inline-block;
   }
-  
-  .submit-signin{
-       padding:15px 30px;
-       color:white;
+
+  .password-container {
+    position: relative;
   }
-  .submit-signin:hover{
-    cursor:pointer;
+
+input[type="text"], input[type="email"], input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #00ffea; /* Neon-like border for inputs */
+  border-radius: 5px; /* Slightly rounded corners for inputs */
+  background-color: transparent;
+  color: #000000; /* High contrast text color */
+  outline: none; /* Remove default focus outline */
+  }
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus {
+  border-color: #ff00ab; /* Change border color on focus for visibility */
+  }
+
+  .eye-icon {
+    position: absolute;
+    top: 66%;
+    right: -3%;
+    transform: translateY(-40%);
+  }
+
+  .submit-signin {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #ff00ab; /* Vibrant button color */
+    color: #ffffff; /* Button text color */
+    border-radius: 5px; /* Rounded corners for the button */
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth background color transition on hover */
+  }
+
+  .submit-signin:hover {
+    background-color: #cf0090; /* Darker shade on hover for interaction feedback */
   }
