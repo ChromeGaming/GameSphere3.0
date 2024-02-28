@@ -4,6 +4,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   const animatedBox = document.getElementById("main-div");
   function isInViewport(element) {
+    
     const rect = element.getBoundingClientRect();
     return (
       rect.top >= 0 &&
